@@ -293,18 +293,23 @@ void start(twoDimVector& board, twoDimStack& checked, int n, void(*algorithm)(tw
     switch (m) {
     case 1:
         algorithm(board, checked, n, findBestQueen, placeQueen);
+        end = hrClock::now();
+        cout << "\nAlgoritmas uztruko: " << std::chrono::duration<double>(end - start).count() << " s \n";
         break;
     case 2:
         algorithm(board, checked, n, findBestBishop, placeBishop);
+        end = hrClock::now();
+        cout << "\nAlgoritmas uztruko: " << std::chrono::duration<double>(end - start).count() << " s \n";
         break;
     case 3:
         algorithm(board, checked, n, findBestKnight, placeKnight);
+        end = hrClock::now();
+        cout << "\nAlgoritmas uztruko: " << std::chrono::duration<double>(end - start).count() << " s \n";
         break;
     default:
         cout << "Tokio pasirinkimo nera! \n";
+        break;
     }
-    end = hrClock::now();
-    cout << "\nAlgoritmas uztruko: " << std::chrono::duration<double>(end - start).count() << " s \n";
 }
 
 
@@ -348,6 +353,7 @@ int main()
             break;
         default:
             cout << "Tokio pasirinkimo nera! \n";
+            break;
         }
         cout << "Paspauskite Enter jeigu norite pradeti is naujo \n";
         cin.ignore(256, '\n');
