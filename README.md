@@ -12,6 +12,6 @@ Realizuoti du algoritmai:
 
 ## Įdiegimo instrukcija
 
- - Atsisųsti programos [instaliavimo failą](https://github.com/dovmar/DominavimoSkaicius/releases/latest/download/setup.msi) arba vien tik [.exe failą](https://github.com/dovmar/DominavimoSkaicius/releases/latest/download/dominavimo_skaicius.exe).
+ - Atsisųsti programos [instaliavimo failą](https://github.com/dovmar/DominavimoSkaicius/releases/latest/download/dominavimo_skaicius.msi) arba vien tik [.exe failą](https://github.com/dovmar/DominavimoSkaicius/releases/latest/download/dominavimo_skaicius.exe).
  - Atidaryti programą
  - Sekti instrukcijas ekrane
