@@ -10,7 +10,7 @@ Realizuoti du algoritmai:
 - Paieška su grįžimu
 - Godus algoritmas apytiksliems atsakymams
 
-## Įdiegimo instrukcija
+## Naudojimosi instrukcija
 
  - Atsisųsti programos [instaliavimo failą](https://github.com/dovmar/DominavimoSkaicius/releases/latest/download/dominavimo_skaicius.msi) arba vien tik [.exe failą](https://github.com/dovmar/DominavimoSkaicius/releases/latest/download/dominavimo_skaicius.exe).
  - Atidaryti programą.
