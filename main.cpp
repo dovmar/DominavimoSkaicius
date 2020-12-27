@@ -209,7 +209,7 @@ void removeFromVector(twoDimVector& board, int k) {
 }
 
 
-void search(twoDimVector& board, twoDimStack& checked, int n, pair<int, int>(*findType)(twoDimVector&, twoDimStack&, int, int), void(*placeType)(twoDimVector&, int, int, int, int)) {
+void dominatingSet(twoDimVector& board, twoDimStack& checked, int n, pair<int, int>(*findType)(twoDimVector&, twoDimStack&, int, int), void(*placeType)(twoDimVector&, int, int, int, int)) {
     int k = 1;
     int k_best = 1000;
     twoDimVector ats;
@@ -253,7 +253,7 @@ void search(twoDimVector& board, twoDimStack& checked, int n, pair<int, int>(*fi
 
 
 
-void heuristicSearch(twoDimVector& board, twoDimStack& checked, int n, pair<int, int>(*findType)(twoDimVector&, twoDimStack&, int, int), void(*placeType)(twoDimVector&, int, int, int, int)) {
+void greedyDominatingSet(twoDimVector& board, twoDimStack& checked, int n, pair<int, int>(*findType)(twoDimVector&, twoDimStack&, int, int), void(*placeType)(twoDimVector&, int, int, int, int)) {
     pair<int, int> coordBest;
     int k = 1;
     while (true) {
@@ -308,6 +308,7 @@ void start(twoDimVector& board, twoDimStack& checked, int n, void(*algorithm)(tw
         break;
     default:
         cout << "Tokio pasirinkimo nera! \n";
+        cin.clear();
         break;
     }
 }
@@ -337,6 +338,8 @@ int main()
         if (n <= 0) {
             n = 1;
             cout << "Bloga ivestis, laikau kad lentos dydis lygus 1 \n";
+            cin.clear();
+            cin.ignore(256, '\n');
         }
         cout << "\n";
         initializeBoard(board, checked, n);
@@ -346,13 +349,14 @@ int main()
         cin >> m;
         switch (m) {
         case(1):
-            start(board, checked, n, search);
+            start(board, checked, n, dominatingSet);
             break;
         case(2):
-            start(board, checked, n, heuristicSearch);
+            start(board, checked, n, greedyDominatingSet);
             break;
         default:
             cout << "Tokio pasirinkimo nera! \n";
+            cin.clear();
             break;
         }
         cout << "Paspauskite Enter jeigu norite pradeti is naujo \n";
