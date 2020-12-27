@@ -211,7 +211,7 @@ void removeFromVector(twoDimVector& board, int k) {
 
 void dominatingSet(twoDimVector& board, twoDimStack& checked, int n, pair<int, int>(*findType)(twoDimVector&, twoDimStack&, int, int), void(*placeType)(twoDimVector&, int, int, int, int)) {
     int k = 1;
-    int k_best = 1000;
+    int k_best = INT_MAX;
     twoDimVector ats;
     pair<int, int> coordBest;
     while (k > 0) {
