@@ -2,7 +2,7 @@
 
 
 Programa randa minimalų skaičių tam tikrų šachmatų figūrų (valdovių, rikių arba žirgų) ir tokį jų išdėstymą, kad būtų grąsinama visiems šachmatų
-lentos laukeliams.
+lentos langeliams.
 
 
 Realizuoti du algoritmai:
